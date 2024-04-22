@@ -1,0 +1,21 @@
+name: Gradle project
+on:
+  push:
+  pull_request:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-jar-artifact
+          path: /home/CSCC/vcherukuri/Week10/build/libs/unit-1.0-SNAPSHOT.jar
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: /home/CSCC/vcherukuri/Week10/build/test-results/test-report.zip
