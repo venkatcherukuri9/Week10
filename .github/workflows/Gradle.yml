@@ -1,7 +1,11 @@
 name: Gradle project
 on:
   push:
+   branches:
+      - assignments
   pull_request:
+    branches:
+      - assignments
   
 jobs:
   build:
@@ -13,9 +17,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-jar-artifact
-          path: /home/CSCC/vcherukuri/Week10/build/libs/unit-1.0-SNAPSHOT.jar
+          path: build/libs/unit-1.0-SNAPSHOT.jar
       - name: Upload Test Report
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: /home/CSCC/vcherukuri/Week10/build/test-results/test-report.zip
+          path: build/test-results
