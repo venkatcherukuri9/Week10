@@ -13,6 +13,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+
+      - name: Build Gradle project
+        run: ./gradlew build
+        
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v3
         with:
@@ -23,3 +32,6 @@ jobs:
         with:
           name: test-report
           path: build/test-results
+# setup gradle
+#setup java
+#gradle build
