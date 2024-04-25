@@ -20,8 +20,13 @@ jobs:
           java-version: 11
           distribution: 'adopt'
 
+      - name: Make Gradlew Executable
+        run: chmod +x gradlew
+        
       - name: Build Gradle project
         run: ./gradlew build
+
+
         
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v3
