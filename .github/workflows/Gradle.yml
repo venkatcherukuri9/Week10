@@ -2,10 +2,10 @@ name: Gradle project
 on:
   push:
    branches:
-      - main
+      - Assignment
   pull_request:
     branches:
-      - main
+      - Assignment
   
 jobs:
   build:
