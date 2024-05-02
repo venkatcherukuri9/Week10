@@ -33,7 +33,7 @@ jobs:
         with:
           name: my-jar-artifact
           path: build/libs/unit-1.0-SNAPSHOT.jar
-      - name: Upload Test Report
+      - name: Upload Test Report New
         uses: actions/upload-artifact@v3
         with:
           name: test-report
